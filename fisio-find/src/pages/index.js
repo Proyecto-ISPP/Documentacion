@@ -8,13 +8,13 @@ import styles from './index.module.css'
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <div className={clsx('container-image', styles.containerImage)}>
+        <div className={clsx("container-image", styles.containerImage)}>
           <img
             src="img/logo.PNG"
             alt="FisioFind's logo"
-            className={clsx('hero-image', styles.heroImage)}
+            className={clsx("hero-image", styles.heroImage)}
           />
           <div>
             <Heading as="h1" className="hero__title">
@@ -33,58 +33,48 @@ function HomepageHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
 function ImportantDocument() {
   const documents = [
     {
-      name: "Casos de uso",
-      url: "docs/Introducci%C3%B3n/1.2.%20Casos%20de%20uso",
+      name: "🫱🏽‍🫲🏻 Acuerdo de compromiso",
+      url: "docs/Organización/1.2.%20Commitment%20Agreement",
     },
     {
-      name: "Acuerdo de compromiso",
-      url: "docs/Acuerdos%20y%20contratos/2.1.%20Acuerdo%20de%20compromiso",
+      name: "📊 Análisis de competidores",
+      url: "docs/Organización/1.3.%20Competitor%20Analysis",
     },
     {
-      name: "Coste total de la propiedad (TCO)",
-      url: "docs/Planificaci%C3%B3n/3.8.%20TCO",
+      name: "⚙️ Gestión de la Configuración",
+      url: "docs/Planificación/2.1.%20Configuration%20Management%20Plan",
     },
-    {
-      name: "Gráficos burndown",
-      url: "docs/Seguimiento/4.4.%20Burndown",
-    },
-    {
-      name: "Medición del rendimiento",
-      url: "docs/Rendimiento/5.2.%20Medici%C3%B3n%20del%20rendimiento",
-    },
-    {
-      name: "Aportación a la BGCC",
-      url: "docs/category/anexo-i-aportaci%C3%B3n-a-la-bgcc",
-    },
-  ]
+  ];
   return (
     <div
       id="importantDocuments"
-      className={clsx('important-documents', styles.importantDocuments)}
+      className={clsx("important-documents", styles.importantDocuments)}
     >
       <div className="container">
         <h2>Documentos relevantes</h2>
-        <div className={clsx('row', styles.row)}>
+        <div
+          className={clsx("row mx-auto", styles.row)}
+        >
           {documents.map((document, index) => (
             <article className="col col--3 margin--lg" key={index}>
               <a
                 href={document.url}
-                className={clsx('card padding--lg cardContainer', styles.card)}
+                className={clsx("customCard card padding--md cardContainer", styles.customCard, styles.card)}
               >
-                <h3 className="cardTitle">📄 {document.name}</h3>
+                <h3 className="cardTitle">{document.name}</h3>
               </a>
             </article>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 
@@ -92,31 +82,31 @@ function Team() {
   const teamMembers = [
     {
       name: 'Alberto Carmona Sicre',
-      role: 'Backend/Márketing/Analista',
+      role: 'Backend/Márketing',
       team: 'Yeyee',
       photo: '/img/team/Alejandro_Medina.png',
     },
     {
       name: 'Daniel Alors Romero',
-      role: 'Backend/Analista/QA',
+      role: 'Backend/QA',
       team: 'Yeyee',
       photo: '/img/team/Alvaro_Bernal.png',
     },
     {
       name: 'Daniel Fernández Caballero',
-      role: 'Backend/Analista',
+      role: 'Backend',
       team: 'Yeyee',
       photo: '/img/team/Alvaro_Gonzalez.png',
     },
     {
       name: 'Daniel Ruíz López',
-      role: 'Frontend/Márketing/Analista',
+      role: 'Frontend/Márketing',
       team: 'Yeyee',
       photo: '/img/team/Gonzalo_Campos.png',
     },
     {
       name: 'Pablo Fernández Pérez',
-      role: 'FullStack/Analista',
+      role: 'FullStack',
       team: 'Yeyee',
       photo: '/img/team/Ronald_Montoya.png',
     },
@@ -134,13 +124,13 @@ function Team() {
     },
     {
       name: 'Benjamín Ignacio Maureira Flores',
-      role: 'Frontend/Márketing/Analista/QA',
+      role: 'Frontend/Márketing/QA',
       team: 'Happy Meal',
       photo: '/img/team/David_Gavira.png',
     },
     {
       name: 'Delfín Santana Rubio',
-      role: 'Backend/Analista',
+      role: 'Backend',
       team: 'Happy Meal',
       photo: '/img/team/Francisco_Benitez.png',
     },
@@ -152,7 +142,7 @@ function Team() {
     },
     {
       name: 'Julen Redondo Pacheco',
-      role: 'Frontend/Analista',
+      role: 'Frontend',
       team: 'Happy Meal',
       photo: '/img/team/Manuel_Garcia.png',
     },
@@ -164,25 +154,25 @@ function Team() {
     },
     {
       name: 'Daniel Tortorici Bartús',
-      role: 'Frontend/Analista',
+      role: 'Frontend',
       team: 'Piruleta',
       photo: '/img/team/Alberto_Lopez.png',
     },
     {
       name: 'Daniel Vela Camacho',
-      role: 'Frontend/Márketing/Analista',
+      role: 'Frontend/Márketing',
       team: 'Piruleta',
       photo: '/img/team/Joaquin_Martin.png',
     },
     {
       name: 'Francisco Capote García',
-      role: 'Backend/Márketing/Analista',
+      role: 'Backend/Márketing',
       team: 'Piruleta',
       photo: '/img/team/Jose_Maria_Garcia.png',
     },
     {
       name: 'Francisco Mateos Villarejo',
-      role: 'Backend/Márketing/Analista/QA',
+      role: 'Backend/Márketing/QA',
       team: 'Piruleta',
       photo: '/img/team/Jose_Miguel_Garcia.png',
     },

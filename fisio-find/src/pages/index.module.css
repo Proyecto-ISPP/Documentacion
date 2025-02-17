@@ -29,11 +29,19 @@ a {
   color: var(--ifm-text-color);
 }
 
+.customCard {
+    width: 350px !important;
+    margin-left: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+}
+
 .card:hover,
 a:hover {
   text-decoration: none;
   color: #606770;
-  border-color: #cda569;
+  border-color: #6970cd;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
   cursor: pointer;
 }
