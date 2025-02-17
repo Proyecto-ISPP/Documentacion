@@ -530,6 +530,59 @@ En la carpeta `docs` del repositorio del proyecto se almacenará toda la documen
 
 Toda la documentación deberá seguir en todo momento la **política de versionado y control** especificada en el punto 4 de este documento, y además deberá atenerse al ***Plan de Gestión del Cambio***.
 
+### 7.3. Documentation como código
+Siguiendo la filosofía ***Docs as Code*** se ha creado un repositorio de documentación externo al repositorio principal en el que, haciendo uso de la herramienta Docusaurus, se ha montado una página estática que recoge toda la documentación del proyecto.
+La estructura del repositorio es la siguiente
+
+```
+└── fisio-find
+    └── docs 
+    │   ├── 01. Organización/
+    │   │   └── [Acuerdos grupales y documentos de análisis (agile inception, competidores, costes...)]
+    │   |
+    │   ├── 02. Planificación/
+    │   │   └── [Planes y registros de CU, HU, requisitos y trazabilidad]
+    │   |
+    │   ├── 03. Informes/
+    │   |   ├── 3.1. Informes de horas/
+    │   │   |   └── [Informes de tiempo usando la herramienta Clockify]
+    │   |   |
+    │   |   ├── 3.2. Informes de rendimiento/
+    │   │   |   └── [Informes de rendimiento semanal]
+    │   |   |
+    │   |   └── 3.3. Informes de IA/
+    │   |       └── [Informes de uso de Inteligencia Artificial]
+    │   |
+    │   ├── 04. Seguimiento/
+    │   |   ├── 4.1. Reuniones/
+    │   │   |   └── [Actas de reuniones]
+    │   |   |
+    │   |   └── 4.2. Sprint 1/
+    │   │   |   └── [Sprint Planning, Review y Retrospective del Sprint 1]
+    │   |   |
+    │   |   ├── 4.3. Sprint 2/
+    │   │   |   └── [Sprint Planning, Review y Retrospective del Sprint 2]
+    │   |   |    
+    │   |   └── 4.4. Sprint 3/
+    │   │       └── [Sprint Planning, Review y Retrospective del Sprint 3]
+    │   |
+    │   |
+    │   ├── 05. Recursos/
+    │   |   └── 5.1. Feedbacks/
+    │   |       └──[Feedback semanal de las clases]
+    │   |
+    │   └── Inicio.md
+    |
+    ├── src/
+    |   └── [Lógica de la aplicación estática]
+    .
+    .
+    .
+    (Resto del código )
+```
+
+Se puede observar que, con respecto al repositorio principal, en la página se mantiene la misma documentación y una estructura similiar, adaptada para un mayor entendimiento por parte del usuario.
+Así mismo, todos los cambios en los documentos son revisados de forma diaria para mantener la página actualizada constantemente.
 
 ## 8. CONCLUSIÓN
 Este documento define las políticas de gestión de configuración del proyecto **FISIO FIND**. Es crucial que estas buenas prácticas sean aplicadas por todos los miembros del equipo a lo largo de todo el proyecto para procurar un orden, trazabilidad y, en resumen, una buena calidad en el desarrollo y resultado del producto.
