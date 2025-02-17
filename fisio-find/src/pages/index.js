@@ -58,18 +58,22 @@ function ImportantDocument() {
     >
       <div className="container">
         <h2>Documentos relevantes</h2>
-        <div
-          className={clsx("row mx-auto", styles.row)}
-        >
+        <div className={clsx("card-container", styles.cardContainer)}>
           {documents.map((document, index) => (
-            <article className="col col--3 margin--lg" key={index}>
+            <div
+              key={index}
+              className={clsx(
+                "card-document",
+                styles.cardDocument,
+                
+              )}
+            >
               <a
                 href={document.url}
-                className={clsx("customCard card padding--md cardContainer", styles.customCard, styles.card)}
               >
                 <h3 className="cardTitle">{document.name}</h3>
               </a>
-            </article>
+            </div>
           ))}
         </div>
       </div>
@@ -184,18 +188,21 @@ function Team() {
     },
   ]
   return (
-    <div id='teams' className={clsx("meet-us", styles.meetUs)}>
-      <div className='container'>
+    <div
+      id="teams"
+      className={clsx("important-documents", styles.importantDocuments)}
+    >
+      <div className="container">
         <h2>Equipo</h2>
         <h4>Grupo Yeyee</h4>
         <div className={clsx("card-container", styles.cardContainer)}>
           {teamMembers
-            .filter((member) => member.team === 'Yeyee')
+            .filter((member) => member.team === "Yeyee")
             .map((member) => (
               <div
                 key={member.name}
                 className={clsx(
-                  'card card-member',
+                  "card card-member",
                   styles.cardMember,
                   styles.card
                 )}
@@ -203,7 +210,7 @@ function Team() {
                 <img src={member.photo} alt={member.name} />
                 <h6>{member.name}</h6>
                 <div>
-                  {member.role.split('/').map((role, index) => (
+                  {member.role.split("/").map((role, index) => (
                     <span key={index} className={clsx(styles.tag)}>
                       {role}
                     </span>
@@ -215,12 +222,12 @@ function Team() {
         <h4>Grupo Happy Meal</h4>
         <div className={clsx("card-container", styles.cardContainer)}>
           {teamMembers
-            .filter((member) => member.team === 'Happy Meal')
+            .filter((member) => member.team === "Happy Meal")
             .map((member) => (
               <div
                 key={member.name}
                 className={clsx(
-                  'card card-member',
+                  "card card-member",
                   styles.cardMember,
                   styles.card
                 )}
@@ -228,7 +235,7 @@ function Team() {
                 <img src={member.photo} alt={member.name} />
                 <h6>{member.name}</h6>
                 <div>
-                  {member.role.split('/').map((role, index) => (
+                  {member.role.split("/").map((role, index) => (
                     <span key={index} className={clsx(styles.tag)}>
                       {role}
                     </span>
@@ -240,12 +247,12 @@ function Team() {
         <h4>Grupo Piruleta</h4>
         <div className={clsx("card-container", styles.cardContainer)}>
           {teamMembers
-            .filter((member) => member.team === 'Piruleta')
+            .filter((member) => member.team === "Piruleta")
             .map((member) => (
               <div
                 key={member.name}
                 className={clsx(
-                  'card card-member',
+                  "card card-member",
                   styles.cardMember,
                   styles.card
                 )}
@@ -253,7 +260,7 @@ function Team() {
                 <img src={member.photo} alt={member.name} />
                 <h6>{member.name}</h6>
                 <div>
-                  {member.role.split('/').map((role, index) => (
+                  {member.role.split("/").map((role, index) => (
                     <span key={index} className={clsx(styles.tag)}>
                       {role}
                     </span>
@@ -264,7 +271,67 @@ function Team() {
         </div>
       </div>
     </div>
-  )
+  );
+}
+
+function NewSection() {
+  return (
+    <div className={clsx("new-section", styles.newSection)}>
+      <div className="container">
+        <div className={clsx("row", styles.row)}>
+          <div className="col col--4">
+            <div className={clsx("card", styles.card)}>
+              <div className="card__header">
+                <h3>¿Por qué?</h3>
+              </div>
+              <div className="card__body">
+                <p>
+                  Se ha optado por utilizar Docusaurus para crear la base de
+                  gestión del conocimiento del proyecto Fisio Find con el
+                  objetivo de aprovechar las ventajas de la "gestión como
+                  código". Esto permite que la documentación del proyecto se
+                  mantenga organizada, actualizada y fácilmente accesible en
+                  línea, lo que favorece la colaboración y agiliza tanto el
+                  mantenimiento como el despliegue de la información.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col col--4">
+            <div className={clsx("card", styles.card)}>
+              <div className="card__header">
+                <h3>¿Cómo?</h3>
+              </div>
+              <div className="card__body">
+                <p>La estructura que se va a emplear para esta base de 
+                  conocimiento favorece la organización y el acceso a
+                  eficiente a la información. Se ha optado por una
+                  división en Organización, Planificación, Informes,
+                  Seguimiento y Recursos, de forma que cada documento
+                  queda organizado según su naturaleza y propósito.
+                  Además se ofrece una vista en detalle de todos los miembros
+                  del equipo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col col--4">
+            <div className={clsx("card", styles.card)}>
+              <div className="card__header">
+                <h3>¿Dónde?</h3>
+              </div>
+              <div className="card__body">
+                <p>Esto es solo un pequeño almacén de conocimientos. Si 
+                  estás interesado y quieres saber más acerca Fisio Find, 
+                  no dudes en visitar nuestra página web oficial en [página web].
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function Home() {
@@ -276,6 +343,7 @@ export default function Home() {
     >
       <HomepageHeader />
       <main>
+        <NewSection />
         <ImportantDocument />
         <Team />
       </main>

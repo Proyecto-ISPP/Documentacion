@@ -16,6 +16,7 @@
   align-items: center; /* Centra horizontalmente */
   justify-content: center; /* Centra verticalmente */
   width: 100%;
+  margin-top: -40px;
 }
 
 .heroImage {
@@ -35,6 +36,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center !important;
+}
+
+.newSection {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+.newSection .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.newSection .card {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: auto;
 }
 
 .card:hover,
@@ -99,7 +118,8 @@ nav a:hover {
 }
 
 .importantDocuments {
-  padding: 4rem 1rem;
+  padding: 2rem 0;
+  background-color: #f9f9f9;
 }
 
 @media screen and (max-width: 996px) {
@@ -121,4 +141,29 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardDocument, .cardMember {
+  margin: 1rem;
+  flex: 1 1 calc(33.333% - 2rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cardDocument a, .cardMember img {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardDocument h3, .cardMember h6 {
+  margin: 0;
+  font-size: 1.25rem;
 }
