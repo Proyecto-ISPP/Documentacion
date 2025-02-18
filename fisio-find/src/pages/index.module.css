@@ -40,7 +40,6 @@ a {
 
 .newSection {
   padding: 2rem 0;
-  background-color: #f9f9f9;
 }
 
 .newSection .row {
@@ -119,7 +118,6 @@ nav a:hover {
 
 .importantDocuments {
   padding: 2rem 0;
-  background-color: #f9f9f9;
 }
 
 @media screen and (max-width: 996px) {
