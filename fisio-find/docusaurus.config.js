@@ -12,7 +12,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: "Fisio Find - Documentación",
   tagline: "Documentación de la organización Fisio Find",
-  favicon: ".img/fisiofind_favicon.png",
+  favicon: "img/fisiofind_favicon.png",
 
   // Set the production url of your site here
   url: "https://your-docusaurus-site.example.com",
