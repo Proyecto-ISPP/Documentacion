@@ -79,7 +79,7 @@ const config = {
         title: "Fisio Find",
         logo: {
           alt: "My Site Logo",
-          src: ".img/Logo_FisioFind_Verde_sin_fondo.png",
+          src: ".img/Logo_FisioFind_Verde_sin_fondo.PNG",
         },
         items: [
           {
