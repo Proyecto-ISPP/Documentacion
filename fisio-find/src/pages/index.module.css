@@ -80,6 +80,46 @@ nav a:hover {
   gap: 10px;
 }
 
+/* Team-specific grid layouts */
+.yeyeeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.happyMealGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.piruletaGrid {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.piruletaFirstRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.piruletaSecondRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  width: 66%; /* To center the 2 cards */
+}
+
 .cardMember {
   padding: 1rem;
   border-radius: 5px;
@@ -90,11 +130,21 @@ nav a:hover {
 }
 
 .cardMember img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+  border-radius: 0; /* Remove any border radius to make it rectangular */
+}
+
+.cardMember {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardMember:hover {
+  transform: translateY(-5px);
 }
   
 .cardMember {
@@ -181,4 +231,36 @@ nav a:hover {
 .cardDocument h3, .cardMember h6 {
   margin: 0;
   font-size: 1.25rem;
+}
+
+.centeredTitle {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.teamPhotosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.teamPhotoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamPhoto {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.teamPhoto:hover {
+  transform: scale(1.03);
 }

@@ -4,6 +4,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 import Heading from '@theme/Heading'
 import styles from './index.module.css'
+import yeyeeTeam from '/img/team/yeyee_team.png'
+import happyMealTeam from '/img/team/happy_meal_team.png'
+import piruletaTeam from '/img/team/piruleta_team.png'
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
@@ -88,7 +91,7 @@ function Team() {
       name: 'Alberto Carmona Sicre',
       role: 'Backend/Márketing',
       team: 'Yeyee',
-      photo: '/img/team/Alejandro_Medina.png',
+      photo: '/img/team/alberto_transparent.png',
     },
     {
       name: 'Daniel Alors Romero',
@@ -193,9 +196,23 @@ function Team() {
       className={clsx("important-documents", styles.importantDocuments)}
     >
       <div className="container">
-        <h2>Equipo</h2>
-        <h4>Grupo Yeyee</h4>
-        <div className={clsx("card-container", styles.cardContainer)}>
+        <h2 className={styles.centeredTitle}>Equipos</h2>
+        
+        {/* Team photos grid */}
+        <div className={styles.teamPhotosGrid}>
+          <div className={styles.teamPhotoContainer}>
+            <img src={yeyeeTeam} alt="Equipo Yeyee" className={styles.teamPhoto} />
+          </div>
+          <div className={styles.teamPhotoContainer}>
+            <img src={happyMealTeam} alt="Equipo Happy Meal" className={styles.teamPhoto} />
+          </div>
+          <div className={styles.teamPhotoContainer}>
+            <img src={piruletaTeam} alt="Equipo Piruleta" className={styles.teamPhoto} />
+          </div>
+        </div>
+        
+        <h3 className={styles.centeredTitle}>Equipo Yeyee</h3>
+        <div className={styles.yeyeeGrid}>
           {teamMembers
             .filter((member) => member.team === "Yeyee")
             .map((member) => (
@@ -219,8 +236,8 @@ function Team() {
               </div>
             ))}
         </div>
-        <h4>Grupo Happy Meal</h4>
-        <div className={clsx("card-container", styles.cardContainer)}>
+        <h3 className={styles.centeredTitle}>Equipo Happy Meal</h3>
+        <div className={styles.happyMealGrid}>
           {teamMembers
             .filter((member) => member.team === "Happy Meal")
             .map((member) => (
@@ -244,30 +261,58 @@ function Team() {
               </div>
             ))}
         </div>
-        <h4>Grupo Piruleta</h4>
-        <div className={clsx("card-container", styles.cardContainer)}>
-          {teamMembers
-            .filter((member) => member.team === "Piruleta")
-            .map((member) => (
-              <div
-                key={member.name}
-                className={clsx(
-                  "card card-member",
-                  styles.cardMember,
-                  styles.card
-                )}
-              >
-                <img src={member.photo} alt={member.name} />
-                <h6>{member.name}</h6>
-                <div>
-                  {member.role.split("/").map((role, index) => (
-                    <span key={index} className={clsx(styles.tag)}>
-                      {role}
-                    </span>
-                  ))}
+        <h3 className={styles.centeredTitle}>Equipo Piruleta</h3>
+        <div className={styles.piruletaGrid}>
+          <div className={styles.piruletaFirstRow}>
+            {teamMembers
+              .filter((member) => member.team === "Piruleta")
+              .slice(0, 3)
+              .map((member) => (
+                <div
+                  key={member.name}
+                  className={clsx(
+                    "card card-member",
+                    styles.cardMember,
+                    styles.card
+                  )}
+                >
+                  <img src={member.photo} alt={member.name} />
+                  <h6>{member.name}</h6>
+                  <div>
+                    {member.role.split("/").map((role, index) => (
+                      <span key={index} className={clsx(styles.tag)}>
+                        {role}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
+          <div className={styles.piruletaSecondRow}>
+            {teamMembers
+              .filter((member) => member.team === "Piruleta")
+              .slice(3)
+              .map((member) => (
+                <div
+                  key={member.name}
+                  className={clsx(
+                    "card card-member",
+                    styles.cardMember,
+                    styles.card
+                  )}
+                >
+                  <img src={member.photo} alt={member.name} />
+                  <h6>{member.name}</h6>
+                  <div>
+                    {member.role.split("/").map((role, index) => (
+                      <span key={index} className={clsx(styles.tag)}>
+                        {role}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>
