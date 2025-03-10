@@ -134,8 +134,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Inicio",
+                to: "/docs/inicio",
               },
             ],
           },
@@ -143,16 +143,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "X",
-                href: "https://x.com/docusaurus",
+                label: "Instagram",
+                href: "https://www.instagram.com/fisiofindapp/",
               },
             ],
           },
@@ -160,17 +152,17 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "Landing Page",
+                to: "https://fisiofind.netlify.app",
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/Proyecto-ISPP/FISIOFIND",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Fisio Find, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

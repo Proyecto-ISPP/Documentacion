@@ -368,7 +368,10 @@ function NewSection() {
               <div className="card__body">
                 <p>Esto es solo un pequeño almacén de conocimientos. Si 
                   estás interesado y quieres saber más acerca Fisio Find, 
-                  no dudes en visitar nuestra página web oficial en [página web].
+                  no dudes en visitar nuestra página web oficial haciendo click 
+                  <span>
+                    <a href="https://fisiofind.netlify.app" style={{fontWeight: '700'}}> aquí </a>
+                  </span>
                 </p>
               </div>
             </div>
