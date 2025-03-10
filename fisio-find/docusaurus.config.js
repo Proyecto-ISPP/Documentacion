@@ -69,6 +69,29 @@ const config = {
       }),
     ],
   ],
+  
+  // Add the search plugin configuration
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        // Optional: specify options here
+        hashed: true,
+        language: ["en"],
+        indexDocs: true,
+        indexBlog: true,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+        searchResultLimits: 8,
+        searchBarPosition: 'auto',
+        searchBarShortcutHint: true,
+        highlightSearchTermsOnTargetPage: true,
+        // Add these options to improve search quality
+        removeDefaultStopWordFilter: true,
+        removeDefaultStemmer: true,
+      }
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
