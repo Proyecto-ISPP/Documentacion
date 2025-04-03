@@ -42,10 +42,10 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          remarkPlugins: [require("remark-math")],
+          rehypePlugins: [require("rehype-katex")],
         },
         blog: {
           showReadingTime: true,
@@ -53,14 +53,13 @@ const config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",
+          remarkPlugins: [require("remark-math")],
+          rehypePlugins: [require("rehype-katex")],
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -68,7 +67,8 @@ const config = {
       }),
     ],
   ],
-  
+
+
   // Add the search plugin configuration
   plugins: [
     [
@@ -88,6 +88,7 @@ const config = {
         // Add these options to improve search quality
         removeDefaultStopWordFilter: true,
         removeDefaultStemmer: true,
+
       }
     ],
   ],
