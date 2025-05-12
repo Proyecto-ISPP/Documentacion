@@ -218,13 +218,9 @@ En esta sección, realizaremos un análisis estadístico completo basado en las 
 
 ### Datos iniciales
 
-Los datos a analizar son los siguientes:
-
-- **Puntuaciones (total, 22 casos):** 5, 4, 4, 5, 3, 4, 3, 5, 4, 5, 5, 0, 4, 5, 5, 5, 4, 0, 0, 5, 5, 5
-- **Número de prompts (total, 22 casos):** 2, 3, 1, 1, 1, 4, 9, 10, 3, 5, 4, 4, 18, 7, 7, 13, 21, 11, 3, 3, 1, 31
-- **Alucinaciones (segunda semana, 15 casos):** 0%, 33%, 0%, 25%, 100%, 0%, 0%, 0%, 0%, 0%, 100%, 100%, 0%, 0%, 0%
-
-Estos valores corresponden a los 22 prompts evaluados en este sprint, cada uno con su respectiva puntuación (escala de 1 a 5), cantidad de prompts utilizados y, para la segunda semana, el porcentaje de alucinaciones.
+- **Puntuaciones (22 casos):** 5, 4, 4, 5, 3, 4, 3, 5, 4, 5, 5, 0, 4, 5, 5, 5, 4, 0, 0, 5, 5, 5  
+- **Número de prompts:** 2, 3, 1, 1, 1, 4, 9, 10, 3, 5, 4, 4, 18, 7, 7, 13, 21, 11, 3, 3, 1, 31  
+- **Alucinaciones (15 casos de la 2ª semana):** 0%, 33%, 0%, 25%, 100%, 0%, 0%, 0%, 0%, 0%, 100%, 100%, 0%, 0%, 0%
 
 ---
 
@@ -232,253 +228,141 @@ Estos valores corresponden a los 22 prompts evaluados en este sprint, cada uno c
 
 #### 1. Promedio (Media)
 
-Para calcular el promedio de las puntuaciones, sumamos todos los valores y los dividimos entre el número total de casos, que es 22.
+```
+Suma = 85
+Promedio = 85 / 22 ≈ 3.86
+```
 
-Suma de las puntuaciones:  
-5 + 4 + 4 + 5 + 3 + 4 + 3 + 5 + 4 + 5 + 5 + 0 + 4 + 5 + 5 + 5 + 4 + 0 + 0 + 5 + 5 + 5 = 85
-
-Promedio:  
-85 ÷ 22 ≈ 3.86
-
-El promedio de las puntuaciones es **3.86**. Esto indica que, en general, las interacciones con la IA tienen un desempeño positivo, situándose por encima del punto medio de la escala (2.5 en un rango de 0 a 5).
+---
 
 #### 2. Desviación estándar
 
-La desviación estándar mide cuánto se alejan las puntuaciones del promedio, dando una idea de la dispersión. Primero calculamos la varianza.
+```
+Varianza ≈ 2.7377
+Desviación estándar ≈ √2.7377 ≈ 1.65
+```
 
-##### Paso 1: Calcular la varianza
+---
 
-Restamos el promedio (3.86) a cada puntuación, elevamos al cuadrado, sumamos y dividimos entre 22:  
-(5 - 3.86)² = 1.2996  
-(4 - 3.86)² = 0.0196  
-(4 - 3.86)² = 0.0196  
-(5 - 3.86)² = 1.2996  
-(3 - 3.86)² = 0.7396  
-(4 - 3.86)² = 0.0196  
-(3 - 3.86)² = 0.7396  
-(5 - 3.86)² = 1.2996  
-(4 - 3.86)² = 0.0196  
-(5 - 3.86)² = 1.2996  
-(5 - 3.86)² = 1.2996  
-(0 - 3.86)² = 14.8996  
-(4 - 3.86)² = 0.0196  
-(5 - 3.86)² = 1.2996  
-(5 - 3.86)² = 1.2996  
-(5 - 3.86)² = 1.2996  
-(4 - 3.86)² = 0.0196  
-(0 - 3.86)² = 14.8996  
-(0 - 3.86)² = 14.8996  
-(5 - 3.86)² = 1.2996  
-(5 - 3.86)² = 1.2996  
-(5 - 3.86)² = 1.2996
+#### 3. Distribución
 
-Suma de las diferencias al cuadrado:  
-1.2996 + 0.0196 + 0.0196 + 1.2996 + 0.7396 + 0.0196 + 0.7396 + 1.2996 + 0.0196 + 1.2996 + 1.2996 + 14.8996 + 0.0196 + 1.2996 + 1.2996 + 1.2996 + 0.0196 + 14.8996 + 14.8996 + 1.2996 + 1.2996 + 1.2996 = 60.2288
-
-Varianza:  
-60.2288 ÷ 22 ≈ 2.7377
-
-##### Paso 2: Calcular la desviación estándar
-
-Desviación estándar:  
-√2.7377 ≈ 1.65
-
-La desviación estándar es aproximadamente **1.65**, lo que indica una dispersión moderada. Las puntuaciones varían en promedio 1.65 puntos alrededor de la media de 3.86, reflejando cierta variabilidad debido a los valores extremos (0 y 5).
-
-#### 3. Distribución de las puntuaciones
-
-Contamos cuántas veces aparece cada valor:
-
-- 0: 3 veces (13.64%)
-- 3: 2 veces (9.09%)
-- 4: 6 veces (27.27%)
-- 5: 11 veces (50.00%)
-
-**Observación:** La puntuación más frecuente es 5 (50%), seguida de 4 (27.27%). Las puntuaciones altas (4 y 5) representan el 77.27% del total, pero los valores de 0 (13.64%) sugieren una polarización en el desempeño.
+- 0: 3 veces (13.64%)  
+- 3: 2 veces (9.09%)  
+- 4: 6 veces (27.27%)  
+- 5: 11 veces (50%)
 
 ---
 
 ### Análisis del número de prompts
 
-#### 1. Promedio (Media)
+#### 1. Promedio
 
-Sumamos todos los valores del número de prompts y dividimos entre 22.
+```
+Suma = 142
+Promedio = 142 / 22 ≈ 6.45
+```
 
-Suma de los prompts:  
-2 + 3 + 1 + 1 + 1 + 4 + 9 + 10 + 3 + 5 + 4 + 4 + 18 + 7 + 7 + 13 + 21 + 11 + 3 + 3 + 1 + 31 = 142
-
-Promedio:  
-142 ÷ 22 ≈ 6.45
-
-El promedio del número de prompts es **6.45**, indicando que las interacciones tienden a ser moderadamente largas, aunque hay una gran variabilidad.
+---
 
 #### 2. Desviación estándar
 
-##### Paso 1: Calcular la varianza
+```
+Varianza ≈ 63.52
+Desviación estándar ≈ √63.52 ≈ 7.97
+```
 
-Restamos el promedio (6.45) a cada valor, elevamos al cuadrado, sumamos y dividimos entre 22:  
-(2 - 6.45)² = 19.8025  
-(3 - 6.45)² = 11.9025  
-(1 - 6.45)² = 29.7025  
-(1 - 6.45)² = 29.7025  
-(1 - 6.45)² = 29.7025  
-(4 - 6.45)² = 6.0025  
-(9 - 6.45)² = 6.5025  
-(10 - 6.45)² = 12.6025  
-(3 - 6.45)² = 11.9025  
-(5 - 6.45)² = 2.1025  
-(4 - 6.45)² = 6.0025  
-(4 - 6.45)² = 6.0025  
-(18 - 6.45)² = 133.4025  
-(7 - 6.45)² = 0.3025  
-(7 - 6.45)² = 0.3025  
-(13 - 6.45)² = 42.9025  
-(21 - 6.45)² = 211.7025  
-(11 - 6.45)² = 20.7025  
-(3 - 6.45)² = 11.9025  
-(3 - 6.45)² = 11.9025  
-(1 - 6.45)² = 29.7025  
-(31 - 6.45)² = 602.7025
-
-Suma:  
-19.8025 + 11.9025 + 29.7025 + 29.7025 + 29.7025 + 6.0025 + 6.5025 + 12.6025 + 11.9025 + 2.1025 + 6.0025 + 6.0025 + 133.4025 + 0.3025 + 0.3025 + 42.9025 + 211.7025 + 20.7025 + 11.9025 + 11.9025 + 29.7025 + 602.7025 = 1397.45
-
-Varianza:  
-1397.45 ÷ 22 ≈ 63.52
-
-##### Paso 2: Calcular la desviación estándar
-
-Desviación estándar:  
-√63.52 ≈ 7.97
-
-La desviación estándar es **7.97**, mostrando una alta dispersión debido a la amplia gama de valores (de 1 a 31).
+---
 
 #### 3. Rango
 
-- Mínimo: 1 prompt
-- Máximo: 31 prompts
-- Rango = 31 - 1 = 30
-
-**Observación:** El rango amplio y la desviación estándar alta confirman una gran variabilidad en la longitud de las interacciones.
+```
+Rango = 31 - 1 = 30
+```
 
 ---
 
-### Análisis de las alucinaciones (segunda semana)
+### Análisis de alucinaciones (segunda semana)
 
-#### 1. Promedio (Media)
+#### 1. Promedio
 
-Sumamos los porcentajes de alucinaciones de la segunda semana (15 casos) y dividimos entre 15:  
-0 + 33 + 0 + 25 + 100 + 0 + 0 + 0 + 0 + 0 + 100 + 100 + 0 + 0 + 0 = 358
+```
+Suma = 358
+Promedio = 358 / 15 ≈ 23.87%
+```
 
-Promedio:  
-358 ÷ 15 ≈ 23.87
-
-El promedio de alucinaciones es **23.87%**, indicando que, en promedio, casi una cuarta parte de las respuestas en la segunda semana podrían ser erróneas.
+---
 
 #### 2. Desviación estándar
 
-##### Paso 1: Calcular la varianza
-
-Restamos el promedio (23.87) a cada valor, elevamos al cuadrado, sumamos y dividimos entre 15:  
-(0 - 23.87)² = 569.7769  
-(33 - 23.87)² = 83.3569  
-(0 - 23.87)² = 569.7769  
-(25 - 23.87)² = 1.2769  
-(100 - 23.87)² = 5806.2769  
-(0 - 23.87)² = 569.7769  
-(0 - 23.87)² = 569.7769  
-(0 - 23.87)² = 569.7769  
-(0 - 23.87)² = 569.7769  
-(0 - 23.87)² = 569.7769  
-(100 - 23.87)² = 5806.2769  
-(100 - 23.87)² = 5806.2769  
-(0 - 23.87)² = 569.7769  
-(0 - 23.87)² = 569.7769  
-(0 - 23.87)² = 569.7769
-
-Suma:  
-569.7769 + 83.3569 + 569.7769 + 1.2769 + 5806.2769 + 569.7769 + 569.7769 + 569.7769 + 569.7769 + 569.7769 + 5806.2769 + 5806.2769 + 569.7769 + 569.7769 + 569.7769 = 24791.16
-
-Varianza:  
-24791.16 ÷ 15 ≈ 1652.74
-
-##### Paso 2: Calcular la desviación estándar
-
-Desviación estándar:  
-√1652.74 ≈ 40.66
-
-La desviación estándar es **40.66**, reflejando una dispersión muy alta debido a la polarización entre 0% y 100%.
-
-#### 3. Distribución de las alucinaciones
-
-- 0%: 10 veces (66.67%)
-- 25%: 1 vez (6.67%)
-- 33%: 1 vez (6.67%)
-- 100%: 3 veces (20.00%)
-
-**Observación:** La mayoría (66.67%) no tiene alucinaciones, pero un 20% tiene alucinaciones totales (100%), mostrando una clara polarización.
+```
+Varianza ≈ 1652.74
+Desviación estándar ≈ √1652.74 ≈ 40.66
+```
 
 ---
 
-### Relación entre variables
+#### 3. Distribución
 
-#### 1. Puntuaciones y número de prompts (22 casos)
-
-$$
-\begin{aligned}
-&\sum x = 85,\ \sum y = 142,\ \sum xy = 672,\ \sum x^2 = 385,\ \sum y^2 = 1490 \\
-&r = \frac{22 \cdot 672 - 85 \cdot 142}{\sqrt{(22 \cdot 385 - 85^2)(22 \cdot 1490 - 142^2)}} \\
-&r = \frac{14784 - 12070}{\sqrt{(8470 - 7225)(32780 - 20164)}} \approx \frac{2714}{\sqrt{1245 \cdot 12616}} \approx 0.22
-\end{aligned}
-$$
-
-**Resultado:** Correlación **0.22** (positiva débil)
+- 0%: 10 veces (66.67%)  
+- 25%: 1 vez (6.67%)  
+- 33%: 1 vez (6.67%)  
+- 100%: 3 veces (20%)
 
 ---
 
-#### 2. Puntuaciones y alucinaciones (segunda semana, 15 casos)
+### Correlaciones
 
-$$
-\begin{aligned}
-&\sum x = 61,\ \sum y = 358,\ \sum xy = 258,\ \sum x^2 = 301,\ \sum y^2 = 25858 \\
-&r = \frac{15 \cdot 258 - 61 \cdot 358}{\sqrt{(15 \cdot 301 - 61^2)(15 \cdot 25858 - 358^2)}} \\
-&r = \frac{3870 - 21838}{\sqrt{(4515 - 3721)(387870 - 128164)}} \approx \frac{-17968}{\sqrt{794 \cdot 259706}} \approx -0.88
-\end{aligned}
-$$
+#### Puntuaciones y prompts (22 casos)
 
-**Resultado:** Correlación **-0.88** (negativa fuerte)
+```
+∑x = 85, ∑y = 142, ∑xy = 672, ∑x² = 385, ∑y² = 1490, n = 22
 
----
+r ≈ (22×672 - 85×142) / √[(22×385 - 85²)(22×1490 - 142²)]
+r ≈ 0.22
+```
 
-#### 3. Número de prompts y alucinaciones (segunda semana, 15 casos)
+#### Puntuaciones y alucinaciones (15 casos)
 
-$$
-\begin{aligned}
-&\sum x = 133,\ \sum y = 358,\ \sum xy = 1358,\ \sum x^2 = 1889,\ \sum y^2 = 25858 \\
-&r = \frac{15 \cdot 1358 - 133 \cdot 358}{\sqrt{(15 \cdot 1889 - 133^2)(15 \cdot 25858 - 358^2)}} \approx -0.11
-\end{aligned}
-$$
+```
+∑x = 61, ∑y = 358, ∑xy = 258, ∑x² = 301, ∑y² = 25858, n = 15
 
-**Resultado:** Correlación **-0.11** (negativa muy débil)
+r ≈ (15×258 - 61×358) / √[(15×301 - 61²)(15×25858 - 358²)]
+r ≈ -0.88
+```
+
+#### Prompts y alucinaciones (15 casos)
+
+```
+∑x = 133, ∑y = 358, ∑xy = 1358, ∑x² = 1889, ∑y² = 25858, n = 15
+
+r ≈ (15×1358 - 133×358) / √[(15×1889 - 133²)(15×25858 - 358²)]
+r ≈ -0.11
+```
 
 ---
 
 ### Tendencias y observaciones
 
-1. **Puntuaciones:** Promedio de 3.86, con predominio de 5 (50%), pero valores de 0 indican inconsistencias.
-2. **Número de prompts:** Promedio de 6.45, con alta variabilidad (desviación 7.97), desde 1 hasta 31.
-3. **Alucinaciones:** Promedio de 23.87% en la segunda semana, con 66.67% sin alucinaciones y 20% con 100%.
-4. **Relaciones:** Puntuaciones y prompts tienen correlación débil (0.22); puntuaciones y alucinaciones, fuerte negativa (-0.88); prompts y alucinaciones, casi nula (-0.11).
+1. **Puntuaciones:** Media 3.86, con 50% de casos con puntuación 5.  
+2. **Prompts:** Alta variabilidad (media 6.45, desviación 7.97), con casos entre 1 y 31.  
+3. **Alucinaciones:** Promedio 23.87%, pero polarización clara entre 0% y 100%.  
+4. **Relaciones:**  
+   - Puntuaciones vs. prompts: débilmente positiva (0.22)  
+   - Puntuaciones vs. alucinaciones: fuerte negativa (-0.88)  
+   - Prompts vs. alucinaciones: muy débil negativa (-0.11)
 
 ---
 
-### Conclusión del análisis estadístico
+### Conclusión del análisis
 
-- **Puntuaciones:** Promedio de 3.86 y desviación de 1.65 reflejan un desempeño bueno pero variable.
-- **Número de prompts:** Promedio de 6.45 y alta desviación (7.97) muestran interacciones diversas en longitud.
-- **Alucinaciones:** Promedio de 23.87% y desviación de 40.66 indican polarización en la precisión.
-- **Relación:** Las alucinaciones impactan negativamente las puntuaciones (-0.88), mientras que la cantidad de prompts tiene un efecto leve (0.22).
+- **Puntuaciones:** Buen desempeño general (3.86), aunque con algunos casos extremos.  
+- **Prompts:** Las interacciones son muy dispares en longitud.  
+- **Alucinaciones:** Claramente impactan negativamente la calidad.  
+- **Correlaciones:** Se detecta relación fuerte entre precisión y alucinaciones, mientras que el número de prompts parece tener un impacto menor.
+
+---
 
 ## Aprobado por
 
 **Scrum Master:** Antonio Macías Ferrera
+
