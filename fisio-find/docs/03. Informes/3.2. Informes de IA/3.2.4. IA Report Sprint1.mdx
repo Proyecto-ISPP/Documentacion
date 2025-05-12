@@ -248,52 +248,35 @@ A continuación se presentan los distintos prompts evaluados junto con sus respe
 
 Los datos a analizar son los siguientes:
 
-- Puntuaciones: 4, 2, 4, 5, 4, 5, 5, 5, 5, 5, 1, 2, 2, 1, 0, 5, 2, 3, 5, 5
-- Número de prompts: 5, 4, 5, 4, 19, 23, 15, 3, 2, 10, 5, 2, 4, 2, 4, 7, 6, 13, 6, 4
+- **Puntuaciones:** 4, 2, 4, 5, 4, 5, 5, 5, 5, 5, 1, 2, 2, 1, 0, 5, 2, 3, 5, 5
+- **Número de prompts:** 5, 4, 5, 4, 19, 23, 15, 3, 2, 10, 5, 2, 4, 2, 4, 7, 6, 13, 6, 4
+
+---
 
 ### Análisis de las puntuaciones
 
 #### 1. Promedio (Media)
 
-Para calcular el **promedio** de las puntuaciones, sumamos todos los valores y los dividimos entre el número total de casos (20):
-
-$$
-\text{Promedio} = \frac{70}{20} = 3.5
-$$
+```
+Promedio = 70 / 20 = 3.5
+```
 
 El promedio de las puntuaciones es **3.5**, lo que indica que, en general, las puntuaciones están por encima del punto medio de la escala (2.5 en una escala de 0 a 5).
 
+---
+
 #### 2. Desviación estándar
 
-La **desviación estándar** mide la dispersión de las puntuaciones respecto al promedio. Para calcularla, primero necesitamos la **varianza**.
+```
+Varianza = 54.5 / 20 = 2.725
+Desviación estándar = √2.725 ≈ 1.65
+```
 
-##### Paso 1: Calcular la varianza
+La desviación estándar es aproximadamente **1.65**, lo que significa que las puntuaciones tienden a variar en promedio 1.65 puntos respecto a la media.
 
-Restamos el promedio (3.5) a cada puntuación, elevamos esa diferencia al cuadrado, sumamos todos esos valores y dividimos entre el número total de casos (20).
-
-$$
-\text{Varianza} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}
-$$
-
-Aplicando esta fórmula a nuestros datos:
-
-$$
-\text{Varianza} = \frac{54.5}{20} = 2.725
-$$
-
-##### Paso 2: Calcular la desviación estándar
-
-La **desviación estándar** es la raíz cuadrada de la varianza:
-
-$$
-\sqrt{2.725} \approx 1.65
-$$
-
-La desviación estándar es aproximadamente **1.65**, lo que significa que las puntuaciones tienden a variar en promedio **1.65 puntos** alrededor de la media de 3.5, lo que indica una dispersión moderada.
+---
 
 #### 3. Distribución de las puntuaciones
-
-Veamos cómo se distribuyen las puntuaciones contando cuántas veces aparece cada valor:
 
 - 0: 1 vez (5%)
 - 1: 2 veces (10%)
@@ -302,112 +285,80 @@ Veamos cómo se distribuyen las puntuaciones contando cuántas veces aparece cad
 - 4: 4 veces (20%)
 - 5: 7 veces (35%)
 
-Observación: La puntuación más común es 5, que aparece en un 35% de los casos, seguida de 2 con un 25%. Las puntuaciones altas (4 y 5) suman el 55% del total, lo que sugiere un desempeño generalmente bueno. Sin embargo, también hay un 40% de puntuaciones bajas (0, 1 y 2), lo que indica cierta polarización en los resultados.
+Las puntuaciones altas (4 y 5) representan el 55% del total. Sin embargo, un 40% son bajas (0, 1, 2), lo que sugiere cierta polarización.
 
-### Análisis de las puntuaciones
+---
+
+### Análisis del número de prompts
 
 #### 1. Promedio (Media)
 
-Para calcular el **promedio** del número de prompts, sumamos todos los valores y los dividimos entre el número total de casos (20):
+```
+Promedio = 143 / 20 = 7.15
+```
 
-$$
-\text{Promedio} = \frac{143}{20} = 7.15
-$$
+El promedio es **7.15**, indicando que las interacciones tienden a ser de extensión moderada.
 
-El promedio del número de prompts es **7.15**, lo que indica que, en promedio, cada caso tiene alrededor de 7 prompts, aunque existe una gran variación en los datos.
+---
 
 #### 2. Desviación estándar
 
-La **desviación estándar** mide la dispersión de los valores respecto al promedio. Para calcularla, primero necesitamos la **varianza**.
+```
+Varianza = 669.55 / 20 = 33.4775
+Desviación estándar = √33.4775 ≈ 5.79
+```
 
-##### Paso 1: Calcular la varianza
+La desviación estándar es **5.79**, lo que indica una alta dispersión en la longitud de las conversaciones.
 
-Restamos el promedio (7.15) a cada valor, elevamos esa diferencia al cuadrado, sumamos todos esos valores y dividimos entre el número total de casos (20).
-
-$$
-\text{Varianza} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}
-$$
-
-Aplicando esta fórmula a nuestros datos:
-
-$$
-\text{Varianza} = \frac{669.55}{20} = 33.4775
-$$
-
-##### Paso 2: Calcular la desviación estándar
-
-La **desviación estándar** es la raíz cuadrada de la varianza:
-
-$$
-\sqrt{33.4775} \approx 5.79
-$$
-
-La desviación estándar es aproximadamente **5.79**, lo que indica que los valores tienden a variar en promedio casi **6 puntos** alrededor de la media de 7.15, lo que refleja una dispersión bastante alta.
+---
 
 #### 3. Rango
 
-El **rango** nos da una idea de la amplitud de los datos:
+```
+Rango = 23 - 2 = 21
+```
 
-- **Mínimo**: 2 prompts
-- **Máximo**: 23 prompts
+Desde 2 hasta 23 prompts, lo que muestra interacciones de muy distinta longitud.
 
-$$
-\text{Rango} = 23 - 2 = 21
-$$
-
-El número de prompts varía considerablemente, desde interacciones muy cortas (2 prompts) hasta interacciones largas (23 prompts). La alta desviación estándar de **5.79** confirma esta gran dispersión en los datos.
+---
 
 ### Relación entre puntuaciones y número de prompts
 
-Queremos saber si hay alguna relación entre el número de prompts y las puntuaciones. Para esto, calculamos el coeficiente de correlación de Pearson, que mide si las dos variables tienden a moverse juntas y en qué grado.
+Queremos saber si existe relación entre ambos valores. Se usa el coeficiente de correlación de Pearson.
 
-#### Paso 1: Calcular los productos cruzados y sumas necesarias
+```
+Suma de puntuaciones (∑x) = 70
+Suma de prompts (∑y) = 143
+Suma del producto ∑xy = 564
+Suma de x² = 304
+Suma de y² = 1417
+n = 20
 
-Suma de puntuaciones (∑x) = 70  
-Suma de prompts (∑y) = 143  
-Suma del producto de puntuaciones y prompts (∑xy) = 564  
-Suma de puntuaciones al cuadrado (∑x²) = 304  
-Suma de prompts al cuadrado (∑y²) = 1417
+Fórmula:
+r = [n * ∑xy - (∑x * ∑y)] / sqrt[(n * ∑x² - (∑x)²) * (n * ∑y² - (∑y)²)]
 
-#### Paso 2: Aplicar la fórmula de Pearson
+Sustituyendo:
+r = [20 * 564 - 70 * 143] / sqrt[(20 * 304 - 70²) * (20 * 1417 - 143²)]
+r = [11280 - 10010] / sqrt[(6080 - 4900) * (28340 - 20449)]
+r = 1270 / sqrt[1180 * 7891]
+r ≈ 1270 / 3051.45 ≈ 0.42
+```
 
-La fórmula es:
+El coeficiente de correlación es aproximadamente **0.42**, lo que indica una correlación **positiva moderada**.
 
-$$
-r = \frac{n \times \sum{xy} - \sum{x} \times \sum{y}}{\sqrt{(n \times \sum{x^2} - (\sum{x})^2) \times (n \times \sum{y^2} - (\sum{y})^2)}}
-$$
+---
 
-Sustituyendo los valores:
+### Conclusiones
 
-$$
-r = \frac{20 \times 564 - 70 \times 143}{\sqrt{(20 \times 304 - 70^2) \times (20 \times 1417 - 143^2)}}
-$$
+1. **Desempeño positivo pero polarizado:** predominan las puntuaciones altas, pero hay una parte significativa de resultados bajos.
+2. **Correlación moderada:** más prompts pueden llevar a mejores resultados, pero no es una regla.
+3. **Diversidad en interacciones:** mucha variabilidad en la longitud de las conversaciones.
+4. **Dispersión importante:** tanto en puntuaciones como en número de prompts, reflejando un uso muy heterogéneo.
 
-$$
-r = \frac{11280 - 10010}{\sqrt{(6080 - 4900) \times (28340 - 20449)}}
-$$
+---
 
-$$
-r = \frac{1270}{\sqrt{1180 \times 7891}} = \frac{1270}{\sqrt{9311338}} \approx \frac{1270}{3051.45} \approx 0.416
-$$
+### Recomendaciones
 
-El coeficiente de correlación es aproximadamente **0.42**.
-
-Un valor de **0.42** indica una correlación positiva moderada. Esto significa que, en general, a medida que aumenta el número de prompts, las puntuaciones tienden a ser más altas, pero la relación no es muy fuerte. Hay otros factores en juego.
-
-## Conclusiones
-
-1. **Desempeño positivo pero polarizado**: La mayoría de las puntuaciones son altas, pero una porción significativa de resultados es insatisfactoria, sugiriendo que hay inconsistencias en la calidad de las interacciones.
-2. **Correlación moderada**: Hay una relación moderada entre el número de prompts y las puntuaciones, pero no siempre más prompts generan mejores resultados.
-3. **Diversidad en interacciones**: Las interacciones varían considerablemente en la cantidad de prompts, mostrando una alta dispersión y sin un patrón uniforme.
-4. **Variabilidad en puntuaciones**: Aunque predominan las puntuaciones altas (4 y 5), existe una dispersión notable en los resultados.
-
-## Recomendaciones
-
-1. **Optimizar la calidad de los prompts**: Focalizarse en la claridad y efectividad de cada prompt más que en su cantidad.
-2. **Ajustar el número de prompts**: Personalizar la cantidad de prompts según el caso, evitando interacciones innecesarias o excesivamente largas.
-3. **Investigar excepciones**: Estudiar los casos en los que pocos prompts obtienen puntuaciones altas para identificar factores clave.
-
-## Aprobado por
-
-**Scrum Master:** Antonio Macías Ferrera
+1. **Optimizar la calidad de los prompts:** Focalizarse en la claridad y efectividad de cada prompt más que en su cantidad.
+2. **Ajustar el número de prompts:** Personalizar la cantidad de prompts según el caso, evitando interacciones innecesarias o excesivamente largas.
+3. **Investigar excepciones:** Estudiar los casos en los que pocos prompts obtienen puntuaciones altas para identificar factores clave.
